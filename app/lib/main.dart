@@ -1,6 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:openapi/api.dart';
 import 'package:app/resource.dart';
+import 'package:flutter/material.dart';
+import 'package:http_interceptor/http_interceptor.dart';
+import 'package:openapi/api.dart';
+
+import 'logging_interceptor.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +29,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  PetApi _api = PetApi(ApiClient());
+  PetApi _api = PetApi(
+    ApiClient()
+      ..client = HttpClientWithInterceptor.build(
+        interceptors: [LoggingInterceptor()],
+      ),
+  );
 
   Resource _resource = const Ready();
 
