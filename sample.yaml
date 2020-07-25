@@ -25,6 +25,7 @@ paths:
           in: query
           description: ID of pet to return
           required: true
+          explode: false
           schema:
             type: array
             items:

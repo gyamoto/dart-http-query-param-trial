@@ -25,7 +25,7 @@ class PetApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-      queryParams.addAll(_convertParametersForCollectionFormat("multi", "petIds", petIds));
+      queryParams.addAll(_convertParametersForCollectionFormat("csv", "petIds", petIds));
 
     List<String> contentTypes = [];
 
