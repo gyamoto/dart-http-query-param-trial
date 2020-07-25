@@ -19,12 +19,13 @@ class PetApi {
     }
 
     // create path and map variables
-    String path = "/pet/{petIds}".replaceAll("{format}","json").replaceAll("{" + "petIds" + "}", petIds.toString());
+    String path = "/pet".replaceAll("{format}","json");
 
     // query params
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
+      queryParams.addAll(_convertParametersForCollectionFormat("multi", "petIds", petIds));
 
     List<String> contentTypes = [];
 

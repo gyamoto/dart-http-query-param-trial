@@ -9,7 +9,7 @@ All URIs are relative to *https://example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPetByIds**](PetApi.md#getPetByIds) | **GET** /pet/{petIds} | Find pet by ID
+[**getPetByIds**](PetApi.md#getPetByIds) | **GET** /pet | Find pet by ID
 
 
 # **getPetByIds**

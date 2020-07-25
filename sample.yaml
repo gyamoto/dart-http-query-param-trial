@@ -13,7 +13,7 @@ tags:
     description: Everything about your Pets
 
 paths:
-  "/pet/{petIds}":
+  "/pet":
     get:
       tags:
         - pet
@@ -22,7 +22,7 @@ paths:
       operationId: getPetByIds
       parameters:
         - name: petIds
-          in: path
+          in: query
           description: ID of pet to return
           required: true
           schema:

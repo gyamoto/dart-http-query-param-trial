@@ -58,7 +58,7 @@ All URIs are relative to *https://example.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*PetApi* | [**getPetByIds**](doc//PetApi.md#getpetbyids) | **GET** /pet/{petIds} | Find pet by ID
+*PetApi* | [**getPetByIds**](doc//PetApi.md#getpetbyids) | **GET** /pet | Find pet by ID
 
 
 ## Documentation For Models
